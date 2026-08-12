@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0878d1">
+  <meta name="description" content="Tạo ảnh đại diện K68 - Trường Đại học Quảng Bình">
+  <title>Avatar K68 - Trường Đại học Quảng Bình</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="badge">K68</div>
+      <div>
+        <h1>TẠO AVATAR K68</h1>
+        <p>Trường Đại học Quảng Bình</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="steps">
+        <span class="step active"><b>1</b> Chọn ảnh</span>
+        <span class="arrow">→</span>
+        <span class="step"><b>2</b> Tải ảnh về</span>
+      </div>
+
+      <label class="upload" for="photoInput">
+        <span class="upload-icon">📷</span>
+        <strong>Chọn ảnh cá nhân</strong>
+        <small>Ảnh sẽ được xử lý ngay trên điện thoại/máy tính của bạn</small>
+      </label>
+      <input id="photoInput" type="file" accept="image/*" hidden>
+
+      <div id="editor" class="editor hidden">
+        <div class="preview-wrap">
+          <canvas id="canvas" width="1080" height="1080" aria-label="Ảnh đại diện xem trước"></canvas>
+        </div>
+
+        <div class="controls">
+          <div class="control-row">
+            <label for="zoom">Phóng to</label>
+            <input id="zoom" type="range" min="1" max="2.5" step="0.01" value="1">
+          </div>
+          <p class="hint">Có thể kéo ảnh trong khung để căn khuôn mặt.</p>
+
+          <div class="buttons">
+            <button id="downloadBtn" class="primary">⬇️ TẢI ẢNH ĐẠI DIỆN</button>
+            <button id="resetBtn" class="secondary">Chọn ảnh khác</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="message" class="message" aria-live="polite"></div>
+    </section>
+
+    <section class="info">
+      <h2>Hướng dẫn sử dụng</h2>
+      <ol>
+        <li>Nhấn <b>Chọn ảnh cá nhân</b>.</li>
+        <li>Ảnh được tự động ghép với khung K68.</li>
+        <li>Nếu cần, kéo ảnh hoặc điều chỉnh <b>Phóng to</b>.</li>
+        <li>Nhấn <b>TẢI ẢNH ĐẠI DIỆN</b> rồi dùng ảnh vừa tải làm ảnh đại diện Facebook.</li>
+      </ol>
+      <p class="privacy">🔒 Ảnh cá nhân không được tải lên máy chủ; toàn bộ quá trình ghép ảnh thực hiện trực tiếp trên thiết bị.</p>
+    </section>
+
+    <footer>Trường Đại học Quảng Bình • Avatar K68</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
